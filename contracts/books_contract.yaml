@@ -1,0 +1,14 @@
+description: Given the end point Books details should be provided as a list
+name: BooksList_Success
+request:
+  urlPath: /producer/books
+  method: GET
+  matchers:
+    url:
+      regex: /producer/([a-zA-Z]*)
+
+response:
+  status: 200
+  headers:
+    Content-Type: "application/json"
+  bodyFromFile: responces_body/books.json
